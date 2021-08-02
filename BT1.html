@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc nhất</title>
+</head>
+<body>
+<h1>Phương trình bậc nhất Ax + b = 0</h1>
+<label for="thamSoA">Nhập tham số A : </label>
+<input type="number" id="thamSoA"> <br>
+<label for="thamSoA">Nhập tham số b : </label>
+<input type="number" id="thamSoB">
+<button onclick="returnResult()">Kết quả </button>
+<div id="result"></div>
+</body>
+<script>
+    function returnResult(){
+        let a = +document.getElementById("thamSoA").value;
+        let b = +document.getElementById("thamSoB").value;
+        if (a == 0 && b != 0){
+            document.getElementById("result").innerText = "Phương trình vô nghiệm ! ";
+        }else if (a == 0 && b== 0){
+            document.getElementById("result").innerText = "Phương trình vô số nghiệm !!";
+        }else{
+            document.getElementById("result").innerText = "Nghiệm phương trình là : "+(-b/a);
+        }
+    }
+</script>
+</html>
